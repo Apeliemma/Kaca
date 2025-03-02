@@ -1,0 +1,858 @@
+{
+    "admin": [
+        {
+            "type": "single",
+            "slug": "admin_dashboard",
+            "menus": {
+                "label": "Dashboard",
+                "icon": "icon-home",
+                "url": "admin"
+            },
+            "children": [],
+            "subs": [
+                "chart/list",
+                ""
+            ],
+            "urls": [
+                "home",
+                "admin",
+                "dashboard",
+                "user/password",
+                "user/notifications/get",
+                "user/notifications/list",
+                "user/notifications/mark",
+                "user/notifications/mark-read",
+                "user/notifications/view-all",
+                "user/notifications/list/allNotification",
+                "user/profile",
+                "user/profile-picture",
+                "email/verify/",
+                "admin/files/update-tags",
+                "admin/settings/core/categorytypeitem/list"
+            ]
+        },
+        {
+            "type": "single",
+            "slug": "manage_users",
+            "menus": {
+                "label": "Users",
+                "icon": "icon-users",
+                "url": "admin/users"
+            },
+            "children": [],
+            "subs": [
+                "list",
+                "user",
+                "user/deactivate",
+                "user/activate",
+                "user/reset-password",
+                "user/store"
+            ],
+            "urls": [
+                "list",
+                "store/settings/config/stores/list",
+                "store/settings/departments/list"
+            ]
+        },
+        {
+            "type": "single",
+            "slug": "manage_reports",
+            "menus": {
+                "label": "Reports",
+                "icon": "icon-grid",
+                "url": "admin/logs"
+            },
+            "children": [],
+            "subs": [
+                "list",
+                "user"
+            ],
+            "urls": [
+                "list"
+            ]
+        },
+        {
+            "type": "hidden",
+            "slug": "manage_permission_group",
+            "menus": {
+                "label": "Permissions",
+                "icon": "icon-key",
+                "url": "admin/permissiongroup"
+            },
+            "children": [],
+            "subs": [
+                "list",
+                "remove",
+                "update-permission",
+                "users/list",
+                "add-to-group"
+            ],
+            "urls": [
+                "list"
+            ]
+        },
+        {
+            "type": "many",
+            "slug": "reports",
+            "label": "Settings",
+            "icon": "icon-cog",
+            "main": "admin/settings",
+            "children": [
+                {
+                    "label": "Property",
+                    "slug": "property",
+                    "url": "admin/settings/property"
+                }
+            ],
+            "subs": [
+                "list",
+                "property/list",
+                "propertymodel",
+                "propertymodel/list"
+            ],
+            "urls": [
+                ""
+            ]
+        }
+    ],
+    "mo": [
+        {
+            "type": "single",
+            "slug": "view_dashboard",
+            "menus": {
+                "label": "Dashboard",
+                "icon": "icon-home",
+                "url": "mo"
+            },
+            "children": [],
+            "subs": [
+                "dashboard",
+                "dashboard/techissues",
+                "dashboard/techissues/list",
+                "dashboard/techissues/approve",
+                "dashboard/techissues/decline"
+            ],
+            "urls": [
+                "home",
+                "user/password",
+                "user/profile",
+                "user/notifications/get",
+                "user/notifications/list",
+                "user/notifications/list/allNotification",
+                "user/notifications/view-all",
+                "user/notifications/mark",
+                "user/notifications/mark-read",
+                "user/profile-picture",
+                "email/verify/",
+                "mo/dashboard/qmtech/approved",
+                "mo/dashboard/qmtech/list/approved",
+                "mo/dashboard/qmtech/receipt",
+                "mo/dashboard/qmtech/list/receipt",
+                "mo/stocks/stock",
+                "technician/stores/items",
+                "technician/requisitions/list"
+            ]
+        },
+        {
+            "type": "many",
+            "slug": "requisition",
+            "label": "Requisition",
+            "icon": "bi-stickies",
+            "main": "mo/requisitions",
+            "url": "mo/requisitions",
+            "children": [
+                {
+                    "label": "All",
+                    "slug": "all_requisitions",
+                    "url": "mo/requisitions?status=all"
+                },
+                {
+                    "label": "Approved",
+                    "slug": "approved_requisition",
+                    "url": "mo/requisitions?status=approved"
+                },
+                {
+                    "label": "Declined",
+                    "slug": "declined_requisition",
+                    "url": "mo/requisitions?status=declined"
+                }
+            ],
+            "subs": [
+                "list",
+                "all",
+                "approved",
+                "declined",
+                "approve",
+                "decline"
+            ],
+            "urls": [
+                "admin/settings/units/list",
+                "mo/requisitions",
+                "admin/settings/propertymodel/list"
+            ]
+        },
+        {
+            "type": "single",
+            "slug": "aircraft",
+            "menus": {
+                "label": "Aircrafts",
+                "icon": "icon-book",
+                "url": "mo/aircrafts"
+            },
+            "children": [],
+            "subs": [
+                "",
+                "list"
+            ],
+            "urls": [
+                "admin/settings/propertymodel/list"
+            ]
+        },
+        {
+            "type": "many",
+            "slug": "reports",
+            "label": "Reports",
+            "icon": "icon-basket",
+            "main": "mo/reports",
+            "children": [
+                {
+                    "label": "Requisition Report",
+                    "slug": "requisition_report",
+                    "url": "mo/reports/requisitions"
+                },
+                {
+                    "label": "Received Items Report",
+                    "slug": "received_items_report",
+                    "url": "mo/reports/receiveditems"
+                }
+            ],
+            "subs": [
+                "list",
+                "requisitions/list",
+                "receiveditems/list"
+            ],
+            "urls": [
+            ]
+        }
+    ],
+    "technician": [
+        {
+            "type": "single",
+            "slug": "view_dashboard",
+            "menus": {
+                "label": "Dashboard",
+                "icon": "icon-home",
+                "url": "technician"
+            },
+            "children": [],
+            "subs": [
+                "dashboard/list/qm-requests"
+            ],
+            "urls": [
+                "home",
+                "dashboard",
+                "user/password",
+                "user/profile",
+                "user/notifications/get",
+                "user/notifications/list",
+                "user/notifications/list/allNotification",
+                "user/notifications/view-all",
+                "user/notifications/mark",
+                "user/notifications/mark-read",
+                "user/profile-picture",
+                "email/verify/"
+            ]
+        },
+        {
+            "type": "many",
+            "slug": "stores",
+            "label": "Stores",
+            "icon": "bi-stickies",
+            "main": "technician/stores",
+            "children": [
+                {
+                    "label": "All Items",
+                    "slug": "items",
+                    "url": "technician/stores/items"
+                },
+                {
+                    "label": "TLoans",
+                    "slug": "tloans",
+                    "url": "technician/stores/items/tloans"
+                },
+                {
+                    "label": "Issued Items by QM",
+                    "slug": "issued_items",
+                    "url": "technician/stores/items/issued"
+                }
+            ],
+            "subs": [
+                "items/list",
+                "items/issued",
+                "items/issued/list",
+                "items/issue",
+                "items/tloans/list",
+                "items/stock",
+                "items/printff890",
+                "items/make-requisition"
+            ],
+            "urls": [
+                "mo/aircrafts/list",
+                "store/settings/config/stores/list"
+            ]
+        },
+        {
+            "type": "single",
+            "slug": "requisition",
+            "menus": {
+                "label": "Requisition",
+                "icon": "icon-book",
+                "url": "technician/requisitions"
+            },
+            "children": [],
+            "subs": [
+                "",
+                "list"
+            ],
+            "urls": [
+                "",
+                "store/settings/departments/list"
+            ]
+        },
+        {
+            "type": "many",
+            "slug": "reports",
+            "label": "Reports",
+            "icon": "icon-basket",
+            "main": "technician/reports",
+            "children": [
+                {
+                    "label": "Requisition Report",
+                    "slug": "requisition_report",
+                    "url": "technician/reports/requisitions"
+                },
+                {
+                    "label": "Received Items Report",
+                    "slug": "received_items_report",
+                    "url": "technician/reports/receiveditems"
+                }
+            ],
+            "subs": [
+                "list",
+                "requisitions/list",
+                "receiveditems/list"
+            ],
+            "urls": [
+            ]
+        }
+    ],
+    "store": [
+        {
+            "type": "single",
+            "slug": "view_dashboard",
+            "menus": {
+                "label": "Dashboard",
+                "icon": "icon-home",
+                "url": "store"
+            },
+            "children": [],
+            "subs": [
+                "",
+                "stocks/stock/approve",
+                "stocks/stock/decline",
+                "dashboard"
+            ],
+            "urls": [
+                "home",
+                "user/password",
+                "user/profile",
+                "user/notifications/get",
+                "user/notifications/list",
+                "user/notifications/list/allNotification",
+                "user/notifications/view-all",
+                "user/notifications/mark",
+                "user/notifications/mark-read",
+                "user/profile-picture",
+                "email/verify/",
+                "dashboard"
+            ]
+        },
+        {
+            "type": "single",
+            "slug": "supplier_management",
+            "menus": {
+                "label": "Suppliers",
+                "icon": "icon-book",
+                "url": "store/suppliers"
+            },
+            "children": [],
+            "subs": [
+                "",
+                "list"
+            ],
+            "urls": [
+                ""
+            ]
+        },
+        {
+            "type": "single",
+            "slug": "view_local_purchase_orders",
+            "menus": {
+                "label": "Local Purchase Orders",
+                "icon": "icon-folder",
+                "url": "store/lpos"
+            },
+            "children": [],
+            "subs": [
+                "list",
+                "lpo",
+                "lpo/list"
+            ],
+            "urls": [
+                ""
+            ]
+        },
+        {
+            "type": "single",
+            "slug": "aircraft",
+            "menus": {
+                "label": "Aircrafts",
+                "icon": "icon-book",
+                "url": "mo/aircrafts"
+            },
+            "children": [],
+            "subs": [
+                "",
+                "list"
+            ],
+            "urls": [
+                "admin/settings/propertymodel/list"
+            ]
+        },
+        {
+            "type": "single",
+            "slug": "view_stock_movement",
+            "menus": {
+                "label": "Stock Movement",
+                "icon": "icon-folder",
+                "url": "store/stocks/movements"
+            },
+            "children": [],
+            "subs": [
+                "list"
+            ],
+            "urls": [
+                "store/stocks/spareparts",
+                "store/stocks/stock"
+            ]
+        },
+        {
+            "type": "many",
+            "slug": "issuing",
+            "label": "Issuing",
+            "icon": "bi-stickies",
+            "main": "store/issuing",
+            "children": [
+                {
+                    "label": "TLoans",
+                    "slug": "tloans",
+                    "url": "store/issuing/tloans"
+                },
+                {
+                    "label": "Requests",
+                    "slug": "requests",
+                    "url": "store/issuing/requests"
+                },
+                {
+                    "label": "To Supplier",
+                    "slug": "to_supplier",
+                    "url": "store/issuing/suppliers"
+                },
+                {
+                    "label": "Issued Items",
+                    "slug": "issues",
+                    "url": "store/issuing/requests/issued"
+                }
+            ],
+            "subs": [
+                "list",
+                "categories/list",
+                "units/list",
+                "suppliers/list-parts",
+                "requests",
+                "requests/issue",
+                "requests/list",
+                "requests/issued",
+                "tloans",
+                "tloans/list",
+                "tloans/return",
+                "suppliers",
+                "suppliers/list"
+            ],
+            "urls": [
+                "admin/settings/units/list"
+            ]
+        },
+        {
+            "type": "many",
+            "slug": "receiving",
+            "label": "Receiving",
+            "icon": "bi-stickies",
+            "main": "store/receiving",
+            "children": [
+                {
+                    "label": "From Supplier",
+                    "slug": "from_supplier",
+                    "url": "store/receiving/suppliers"
+                },
+                {
+                    "label": "From Tech",
+                    "slug": "from_tech",
+                    "url": "store/receiving/tech"
+                }
+            ],
+            "subs": [
+                "list",
+                "categories/list",
+                "units/list",
+                "suppliers/list-parts",
+                "tech/list",
+                "tech/receive"
+            ],
+            "urls": [
+                "store/dashboards/qm/receive-requests",
+                "store/dashboards/qm/receive-requests/receive",
+                "store/dashboards/qm/list/receive-requests",
+                "store/dashboards/qm/tech-receipts",
+                "store/dashboards/qm/tech-receipts/process",
+                "store/dashboards/qm/tech-receipts/decline",
+                "store/dashboards/qm/list/tech-receipts",
+                "store/dashboards/qm/pending-requests",
+                "store/dashboards/qm/list/pending-requests",
+                "admin/settings/units/list"
+            ]
+        },
+        {
+            "type": "many",
+            "slug": "spare_parts",
+            "label": "Parts",
+            "icon": "icon-basket",
+            "main": "store/stocks/spareparts",
+            "children": [
+                {
+                    "label": "Manage",
+                    "slug": "manage",
+                    "url": "store/stocks/spareparts"
+                },
+                {
+                    "label": "Stocks",
+                    "slug": "stocks",
+                    "url": "store/stocks/spareparts/store"
+                }
+            ],
+            "subs": [
+                "",
+                "edit",
+                "update",
+                "change-location",
+                "create",
+                "list",
+                "delete",
+                "store",
+                "store/list",
+                "store/part",
+                "store/part/change-location"
+            ],
+            "urls": [
+                "store/stocks/list",
+                "store/stocks/categories/list",
+                "store/stocks/units/list",
+                "store/stocks/stock/return",
+                "store/stocks/stock",
+                "admin/settings/units/list",
+                "admin/settings/propertymodel/list",
+                "admin/users/list",
+                "store/suppliers/list",
+                "store/settings/category/list",
+                "store/settings/locations/list",
+                "store/settings/config/stores/list",
+                "store/settings/departments/list"
+            ]
+        },
+        {
+            "type": "many",
+            "slug": "reports",
+            "label": "Reports",
+            "icon": "bi-kanban",
+            "main": "store/reports",
+            "children": [
+                {
+                    "label": "Records of Voucher",
+                    "slug": "recordsOfVoucher",
+                    "url": "store/reports/rov"
+                },
+                {
+                    "label": "Print Records of Voucher",
+                    "slug": "printRecordsOfVoucher",
+                    "url": "store/reports/rov/print"
+                },
+                {
+                    "label": "IV List",
+                    "slug": "ivLists",
+                    "url": "store/reports/ivlists"
+                },
+                {
+                    "label": "RV List",
+                    "slug": "rvLists",
+                    "url": "store/reports/rvlists"
+                },
+                {
+                    "label": "NIL Stocks",
+                    "slug": "nilStocks",
+                    "url": "store/reports/nilparts"
+                }
+            ],
+            "subs": [
+                "list",
+                "categories/list",
+                "nilparts/list",
+                "rov/assign-technician",
+                "forms/ff7107",
+                "rov/list",
+                "forms/ff7107/stocksheet"
+            ],
+            "urls": [
+                "admin/settings/units/list",
+                "admin/users/list/technician"
+            ]
+        },
+        {
+            "type": "many",
+            "slug": "settings",
+            "label": "Settings",
+            "icon": "icon-cog",
+            "main": "store/settings",
+            "children": [
+                {
+                    "label": "Config",
+                    "slug": "Config",
+                    "url": "store/settings"
+                }
+            ],
+            "subs": [
+                "list",
+                "category/list",
+                "category",
+                "",
+                "locations",
+                "locations/list",
+                "departments",
+                "departments/list",
+                "config/stores",
+                "config/stores/list"
+            ],
+            "urls": [
+                "store/settings"
+            ]
+        },
+        {
+            "type": "hidden",
+            "slug": "store_qm",
+            "menus": {
+                "label": "Members",
+                "icon": "users",
+                "url": "store/spareparts"
+            },
+            "children": [],
+            "subs": [
+                ""
+            ],
+            "urls": [
+                ""
+            ]
+        },
+        {
+            "type": "hidden",
+            "slug": "commanding_officer",
+            "menus": {
+                "label": "Members",
+                "icon": "users",
+                "url": "store/members"
+            },
+            "children": [],
+            "subs": [
+                "",
+                "list",
+                "create",
+                "bulk-upload",
+                "member",
+                "member/list-books",
+                "update"
+            ],
+            "urls": [
+                ""
+            ]
+        },
+        {
+            "type": "hidden",
+            "slug": "officer_commanding",
+            "menus": {
+                "label": "Members",
+                "icon": "users",
+                "url": "store/dashboards/oc"
+            },
+            "children": [],
+            "subs": [
+                "",
+                "supplier-receipts",
+                "supplier-receipts/list",
+                "supplier-receipts/approve",
+                "supplier-receipts/decline",
+                "supplier-issues",
+                "supplier-issues/list",
+                "supplier-issues/accept",
+                "supplier-issues/decline",
+                "tech/receipts",
+                "tech/receipts/list",
+                "tech/receipts/approve",
+                "tech/receipts/decline"
+            ],
+            "urls": [
+                "store/stocks/list"
+            ]
+        }
+    ],
+    "member": [
+        {
+            "type": "single",
+            "slug": "view_dashboard",
+            "menus": {
+                "label": "Dashboard",
+                "icon": "home",
+                "url": "member"
+            },
+            "children": [],
+            "subs": [
+                "latest-books"
+            ],
+            "urls": [
+                "home",
+                "user/password",
+                "user/profile",
+                "user/notifications/get",
+                "user/notifications/list",
+                "user/notifications/list/allNotification",
+                "user/notifications/view-all",
+                "user/profile-picture",
+                "user/notifications/mark",
+                "user/notifications/mark-read",
+                "email/verify/"
+            ]
+        },
+        {
+            "type": "single",
+            "slug": "view_book",
+            "menus": {
+                "label": "Books",
+                "icon": "bold",
+                "url": "member/books"
+            },
+            "children": [],
+            "subs": [
+                "list",
+                "book",
+                "",
+                "book/view-file"
+            ],
+            "urls": [
+            ]
+        },
+        {
+            "type": "single",
+            "slug": "view_book_history",
+            "menus": {
+                "label": "History",
+                "icon": "exchange-alt",
+                "url": "member/books/history"
+            },
+            "children": [],
+            "subs": [
+                "list",
+                "book",
+                "history",
+                "history/list"
+            ],
+            "urls": [
+            ]
+        },
+        {
+            "type": "single",
+            "slug": "view_dashboard",
+            "menus": {
+                "label": "Book Requests",
+                "icon": "sticky-note",
+                "url": "member/books/requests"
+            },
+            "children": [],
+            "subs": [
+                "list",
+                ""
+            ],
+            "urls": [
+                "librarian/settings/categories/list"
+            ]
+        }
+    ],
+    "guest": [
+    ],
+    "out": [
+        {
+            "slug": "guest_login",
+            "type": "single",
+            "menus": {
+                "label": "Login",
+                "icon": "zmdi-account",
+                "url": "login"
+            },
+            "urls": [
+                "logout",
+                "user/status/online",
+                "plan",
+                "home",
+                "register",
+                "user/register",
+                "user/login",
+                "activate",
+                "login",
+                "admin/documents/document/download/"
+            ]
+        },
+        {
+            "slug": "guest_register",
+            "type": "single",
+            "menus": {
+                "label": "Register",
+                "icon": "zmdi-account-add",
+                "url": "register"
+            }
+        }
+    ],
+    "in": [
+        {
+            "slug": "guest_login",
+            "type": "single",
+            "menus": {
+                "label": "Login",
+                "icon": "zmdi-account",
+                "url": "login"
+            },
+            "urls": [
+                "logout",
+                "user/password",
+                "user/profile",
+                "user/profile-picture",
+                "email/verify/"
+            ]
+        }
+    ]
+}

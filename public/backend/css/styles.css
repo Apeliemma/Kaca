@@ -1,0 +1,31 @@
+.label-info {
+    color: #fff;
+    background-color: #1e73be
+}
+
+.label-danger {
+    color: #fff;
+    background-color: #dd3333;
+}
+
+.label-success {
+    color: #fff;
+    background-color: #81d742
+}
+
+.label-warning {
+    background: #d26e4b;
+    color: #fff;
+}
+.title-custom:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-bottom: 4px solid #006a2f;
+    width: 5.7rem;
+    margin: auto;
+    margin-top: 12px;
+    bottom: 0;
+}
